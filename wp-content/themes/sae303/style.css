@@ -127,24 +127,29 @@ footer {
 /* Styles pour les cartes */
 .card {
     background-color: #011A41;
-    border: 1px solid #011A41;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none; /* Supprime le soulignement */
     color: inherit; /* Conserve la couleur par défaut du texte */
+    max-width: 300px; /* Réduction de la taille des cartes */
+    margin: 0 auto; /* Centre les cartes dans chaque colonne */
 }
 
+/* Ajustement des images */
 .card img {
     width: 100%; /* L'image prend toute la largeur de la carte */
-    height: auto;
+    height: 150px; /* Hauteur fixe pour éviter qu'elles soient trop grandes */
+    object-fit: cover; /* Assure que l'image soit bien cadrée sans déformer */
     display: block;
 }
 
+/* Titre dans la carte */
 .card h2 {
-    font-size: 1.25rem;
-    margin: 15px;
+    font-size: 1rem;
+    padding: 10px; /* Espacement autour du titre */
+    margin: 0; /* Pas de marge supplémentaire */
     color: #333;
 }
 
@@ -160,6 +165,7 @@ footer {
         grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
     }
 }
+
 
 
 
