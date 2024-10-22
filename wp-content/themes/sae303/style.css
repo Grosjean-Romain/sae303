@@ -102,6 +102,7 @@ footer {
 
   
 
+
 /* Container général */
 .container {
     text-align: center;
@@ -125,7 +126,7 @@ footer {
 
 /* Styles pour les cartes */
 .card {
-    background-color: #fff;
+    background-color: #011A41;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
