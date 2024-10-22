@@ -7,6 +7,41 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  margin: 0;
+  background-color: #001f3f;
+}
+
+.logo img {
+  width: 350px;
+  height: auto;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.header-menu li {
+  display: inline;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: #d2d2d2;
+  font-weight: 500;
+}
+
+.header-menu a:hover {
+  color: #379BD6;
+
+}
+
 footer {
     background-color: #011A41;
     color: #ffffff;
@@ -38,39 +73,7 @@ footer {
     color: #1abc9c;
   }
   
-  .newsletter-section {
-    margin-top: 40px;
-  }
   
-  .newsletter-section p {
-    margin-bottom: 10px;
-  }
-  
-  .newsletter-section form {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .newsletter-section input[type="email"] {
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    width: 250px;
-  }
-  
-  .newsletter-section button {
-    padding: 10px 15px;
-    background-color: #1abc9c;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  .newsletter-section button:hover {
-    background-color: #16a085;
-  }
   
   .footer-bottom {
     display: flex;
@@ -106,21 +109,21 @@ footer {
 /* Container général */
 .container {
     text-align: center;
-    padding: 20px;
+    padding: 50px;
 }
 
 /* Titre */
 .container h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #011A41;
 }
 
 /* Grille des cartes */
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    gap: 20px; /* Espacement entre les cartes */
+    gap: 40px; /* Espacement entre les cartes */
     margin-top: 30px;
 }
 
@@ -133,24 +136,33 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none; /* Supprime le soulignement */
     color: inherit; /* Conserve la couleur par défaut du texte */
-    max-width: 300px; /* Réduction de la taille des cartes */
     margin: 0 auto; /* Centre les cartes dans chaque colonne */
+    max-width: 30vw; /* Limite la largeur maximale des cartes */
 }
 
 /* Ajustement des images */
 .card img {
     width: 100%; /* L'image prend toute la largeur de la carte */
-    height: 150px; /* Hauteur fixe pour éviter qu'elles soient trop grandes */
+    height: 60vh; /* Hauteur fixe pour les images */
     object-fit: cover; /* Assure que l'image soit bien cadrée sans déformer */
     display: block;
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 20px;
+    color: #011A41;
 }
 
 /* Titre dans la carte */
 .card h2 {
     font-size: 1rem;
     padding: 10px; /* Espacement autour du titre */
-    margin: 0; /* Pas de marge supplémentaire */
-    color: #333;
+    margin: 25px; /* Pas de marge supplémentaire */
+    color: #ffffff;
+    text-align: center;
 }
 
 /* Hover pour les cartes */
@@ -165,6 +177,8 @@ footer {
         grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
     }
 }
+
+
 
 
 

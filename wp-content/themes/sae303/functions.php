@@ -8,3 +8,4 @@ function register_my_menu()
     ));
 }
 add_action('init', 'register_my_menu', 0);
+add_filter('show_admin_bar', '__return_false');

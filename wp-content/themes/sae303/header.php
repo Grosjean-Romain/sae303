@@ -10,15 +10,23 @@
 
 <body <?php body_class(); ?>>
     <header>
-        <nav>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'header-menu',
-                'container' => 'ul',
-                'menu_class' => 'header-menu'
-            ));
-            ?>
-        </nav>
+        <div class="header-container">
+            <div class="logo">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/svg/logo_blanc.svg" alt="<?php bloginfo('name'); ?>">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'header-menu',
+                    'container' => 'ul',
+                    'menu_class' => 'header-menu',
+                ));
+                ?>
+            </nav>
+        </div>
     </header>
 
     <div class="wrap">
