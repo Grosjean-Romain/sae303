@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 
-<head <?php language_attributes(); ?>>
+<head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php the_title(); ?></title>
+    <title> <?php
+            if (is_front_page()) {
+                echo 'Data · Elect';
+            } else {
+                wp_title('·', true, 'right');
+                bloginfo('name');
+            }
+            ?></title>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
     <?php wp_head(); ?>
 </head>
