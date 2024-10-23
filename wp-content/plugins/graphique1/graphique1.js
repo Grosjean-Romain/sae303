@@ -54,8 +54,10 @@
                         if (candidatsDept.length === 0) return deptName;
 
                         const sortedCandidats = candidatsDept.sort((a, b) => parseInt(b.voix) - parseInt(a.voix));
+                        
                         const top3Candidats = sortedCandidats.slice(0, 3);
 
+                        const candidatMajoritaire = top3Candidats[0];
                         let tooltipText = `${deptName}\n> ${getFormattedCandidate1(top3Candidats[0].candidat)} : ${d3.format(",.0f")(top3Candidats[0].voix).replace(/,/g, " ")} voix`;
 
                         tooltipText += top3Candidats.slice(1).map(c =>
@@ -63,10 +65,11 @@
                         ).join("");
 
                         return tooltipText;
-                    }
-                })
+                    },
+      tip: true, 
+    })
             ],
-            subtitle: "Visualisation des quatre premiers candidats en termes de voix pour chaque département, avec mise en avant du candidat ayant obtenu le plus de voix lors du Premier Tour des Élections de 2017."
+            subtitle: "Visualisation des quatre premiers candidats en termes de voix pour chaque département, avec mise en avant du candidat ayant obtenu le plus de voix lors du Premier Tour des Élections de 2017"
         });
 
         div.append(amap2017);

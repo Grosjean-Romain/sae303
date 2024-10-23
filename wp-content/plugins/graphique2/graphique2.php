@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Affiche map leaflet
+ * Graphique 2
  *
  * @package   Graphique 2
  *
  * @wordpress-plugin
- * Plugin Name:       Affiche map leaflet
+ * Plugin Name:       Graphique 2
  * Description:       Cherche un ID "graphique2" et place un graphique dedans
  */
 
@@ -28,7 +28,7 @@ function graphique2()
         'strategy'  => 'defer',
     ));
 
-    wp_localize_script('graphique2', 'mapData', array(
+    wp_localize_script('graphique2', 'mapData2', array(
         'map2Url' => plugins_url('map2.json', __FILE__),
         'departementsUrl' => plugins_url('departements.geojson', __FILE__)
     ));

@@ -1,10 +1,10 @@
 (async () => {
     const div = document.querySelector("#graphique2");
     if (div) {
-        const map2Response = await fetch(mapData.map2Url);
+        const map2Response = await fetch(mapData2.map2Url);
         const map2 = await map2Response.json();
 
-        const departementsResponse = await fetch(mapData.departementsUrl);
+        const departementsResponse = await fetch(mapData2.departementsUrl);
         const departementsGeoJSON2022 = await departementsResponse.json();
 
       function getFormattedCandidate2022(candidat2022) {
@@ -73,8 +73,7 @@
       tip: true, 
     })
   ],
-  title: "Répartition des Candidats Majoritaires par Département - Élection Présidentielle 2022",
-  subtitle: "Visualisation des trois premiers candidats en termes de voix pour chaque département, avec mise en avant du candidat ayant obtenu le plus de voix lors du Premier Tour"
+  subtitle: "Visualisation des trois premiers candidats en termes de voix pour chaque département, avec mise en avant du candidat ayant obtenu le plus de voix lors du Premier Tour des Élections de 2022"
 });
         div.append(amap2022);
     }

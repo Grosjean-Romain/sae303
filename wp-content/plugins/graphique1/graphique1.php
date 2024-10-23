@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Affiche map leaflet
+ * Graphique 1
  *
  * @package   Graphique 1
  *
  * @wordpress-plugin
- * Plugin Name:       Affiche map leaflet
+ * Plugin Name:       Graphique 1
  * Description:       Cherche un ID "graphique1" et place un graphique dedans
  */
 

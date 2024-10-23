@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Graphique 5
+ *
+ * @package   Graphique 5
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Graphique 5
+ * Description:       Cherche un ID "graphique5" et place un graphique dedans
+ */
+
+// https://developer.wordpress.org/plugins/plugin-basics/best-practices/#avoiding-direct-file-access
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+function graphique5()
+{
+    wp_register_script('d3', 'https://cdn.jsdelivr.net/npm/d3@7', null, '7.0', array(
+        'strategy'  => 'defer',
+    ));
+    wp_register_script('plot', 'https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6', array('d3'), '0.6', array(
+        'strategy'  => 'defer',
+    ));
+
+    wp_enqueue_script('graphique5', plugins_url('graphique5.js', __FILE__), array('plot'), '1.0', array(
+        'strategy'  => 'defer',
+    ));
+
+    wp_localize_script('graphique5', 'scoreData2022', array(
+        'score2022' => plugins_url('score2022.json', __FILE__),
+    ));
+}
+add_action('wp_enqueue_scripts', 'graphique5');
